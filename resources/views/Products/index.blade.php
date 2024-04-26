@@ -12,7 +12,44 @@
         Welcome to the grocery store!
     </h1>
     <div>
-        index
+        <table border="1">
+            <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Description
+                </th>
+                <th>
+                    Price
+                </th>
+                <th>
+                    Quantity
+                </th>
+            </tr>
+            @foreach($products as $product)
+                <tr>
+                    <td>
+                        {{$product->id}}
+                    </td>
+                    <td>
+                        {{$product->name}}
+                    </td>
+                    <td>
+                        {{$product->description}}
+                    </td>
+                    <td>
+                        {{$product->price}}
+                    </td>
+                    <td>
+                        {{$product->quantity}}
+                    </td>
+                </tr>
+            @endforeach
+            </table>
     </div>
 </body>
 </html>

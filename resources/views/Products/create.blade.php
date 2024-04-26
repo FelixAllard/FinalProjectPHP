@@ -14,14 +14,17 @@
 <div>
     <!--
         if there is an error, prints it out here!
-    -->
-    @if($error->any())
+
+    {{--@if($error->any())
         <ul>
             @foreach($errors->all() as $error)
                 <li>
                     {{$error}}
                 </li>
+            @endforeach
         </ul>
+    @endif--}}
+    -->
 </div>
 <form method="post" action="{{route('product.store')}}">
     @csrf

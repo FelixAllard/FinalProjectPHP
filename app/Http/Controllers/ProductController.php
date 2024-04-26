@@ -24,6 +24,7 @@ class ProductController extends Controller
             'quantity' =>'required|numeric'
         ]);
         $newProduct = Product::create($date);
-        return redirect(route('Product.index'));
+        $products = Product::all();
+        return redirect(route('Product.index', ['products'=>$products]));
     }
 }
