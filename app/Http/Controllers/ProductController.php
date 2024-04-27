@@ -13,7 +13,7 @@ class ProductController extends Controller
     }
     public function product_create_index()
     {
-        return view('products.create');
+        return view('Admin.create');
     }
     public function store_product(Request $request)
     {
