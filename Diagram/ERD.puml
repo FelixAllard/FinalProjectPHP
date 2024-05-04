@@ -1,0 +1,30 @@
+@startuml
+
+class Item {
+    -id: int
+    -name: string
+    -quantity: int
+    -description: string
+    -price: decimal
+}
+
+class ItemsCart {
+    -id: int
+    -user_id: int
+    -quantity: int
+    -name: string
+    -price: decimal
+}
+
+class User {
+    -id: int
+    -name: string
+    -email: string
+    -password: string
+}
+
+Item "1" -- "0..*" User : owns
+User "1" -- "0..*" ItemsCart : has
+Item <-- ItemsCart : contains
+
+@enduml
